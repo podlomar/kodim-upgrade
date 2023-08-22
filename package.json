@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsc -w"
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "build": "npm run clean && tsc",
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@tsconfig/node16": "^16.1.1",
     "@types/node": "^20.5.2",
+    "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   }
 }
