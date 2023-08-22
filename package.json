@@ -1,0 +1,29 @@
+{
+  "name": "kodim-upgrade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc -w"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/podlomar/kodim-upgrade.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/podlomar/kodim-upgrade/issues"
+  },
+  "homepage": "https://github.com/podlomar/kodim-upgrade#readme",
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.1",
+    "@types/node": "^20.5.2",
+    "typescript": "^5.1.6"
+  }
+}
