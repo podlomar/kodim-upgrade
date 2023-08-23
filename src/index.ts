@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const rootDir = process.argv[2] ?? path.resolve(__dirname);
+const rootDir = process.argv[2] ?? path.resolve('.');
 
 const findAllMdFiles = (dirPath: string): string[] => fs
   .readdirSync(dirPath, { withFileTypes: true })
@@ -45,10 +45,11 @@ const transformAll = (mdFiles: string[]): void => {
 
     if (content !== newContent) {
       fs.writeFileSync(file, newContent, 'utf-8');
-      console.log("File updated: ", file);
+      console.info("File updated: ", file);
     }
   }
 }
 
+console.info('Processing dir:', rootDir);
 const mdFiles = findAllMdFiles(rootDir);
 transformAll(mdFiles);
