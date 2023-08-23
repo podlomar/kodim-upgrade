@@ -1,9 +1,10 @@
 # kodim-upgrade
 
-Přechod formátu kurzu na KodimCMS verzi 1.0 lze provést ve dvou krocích
+Přechod formátu kurzu na KodimCMS verzi 1.0 lze provést ve třech krocích:
 
 1. Spustit tento transformační script
 2. Ručně nasadit novou ikonu kurzu
+3. Upravit adresu webhooku v GitHubu
 
 ## Automatický script
 
@@ -41,3 +42,7 @@ Pokud zatím nemáte ikonu přímo pro kurz, můžete použít některou z ikon 
 
 - `python.svg` - hodí se pro kurzy ohledně Pythonu
 - `construction.svg` - hodí se pro kurzy, které jsou ve výstavbě, nebo zatím nevíte, co tam dát za ikonu.
+
+## Upravení webhooku v GitHubu
+
+Adresa webhooku pro update při změně je nyní `https://kodim.cz/cms/hooks/reindex`. Má nepovinný query parametr `branch`, který je defaultně nastavený na hodnotu `main`. Pokud tedy máte hlavní větev například pojmenovanou `master`, je potřeba adresu upravit na `https://kodim.cz/cms/hooks/reindex?branch=master`.
